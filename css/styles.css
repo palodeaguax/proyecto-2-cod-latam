@@ -1,3 +1,8 @@
+/*mobile*/
+section {
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -7,44 +12,58 @@ body {
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
 header {
-    background-color: white;
-    padding: 20px;
-    margin: 0;
+    background-color: rgb(250, 247, 247);
+    padding: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 25px;
     scroll-behavior: smooth;
 }
 
-.header__logo {
-    margin: 1rem;
-    padding: 0px;
+.logo {
+    max-width: 5rem;
 }
 
-header li {
-    margin-right: 20px;
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
 }
 
-header a {
-    color: black;
+.nav-list li a {
     text-decoration: none;
-    
-}
-
-header a:hover {
-    color: blue
+    color:#080808;
 
 }
 
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+ 
+  
+  .menu a {
+    color: #080808;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .menu a:hover {
+    color: #ffbf00;
+
+  }
+
+  
 img {
     max-width: 100%;
     height: auto;
@@ -65,8 +84,19 @@ section {
   
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    background-color: rgb(117, 13, 214);
+    padding: 15px 35px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 section h1 {
-    font-size: 32px;
+    font-size: 36px;
     margin-top: 0;
     margin-bottom: 20px;
     justify-content: center;
@@ -124,24 +154,58 @@ footer {
     color: white;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
-    
+
+@media screen and (max-width: 600px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .abrir-menu {
+    color: #000000;
     }
 
-    ul {
-        justify-content: center;
+    .cerrar-menu {
+    color: #cccccc;    
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav {
         display: flex;
-       
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #faf7f7;
+        padding: 2rem;
+        box-shadow: 0 0 0 0,0.1vmax rgba(0, 0, 0, 5);
+
     }
 
-    main {
-        padding: 20px;
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
     }
 
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
     }
+}
+
+
+
+
+    
 
     

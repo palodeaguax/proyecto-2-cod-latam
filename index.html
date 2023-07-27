@@ -6,24 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mario Avila</title>
 
-    <!-- CSS -->
+    <!--link rel="stylesheet" href="css/styles.css"-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!--script src="https://kit.fontawesome.com/4fca10f768.js" crossorigin="anonymous"></script-->
 </head>
 <body>
-    <header class="header">
-        <a href="#contacto-1"> 
+
+    <header> 
         <img class= "header__logo" src="./assets/Eidos.jpg" alt="Eidos"></a>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#Hablemos"> Inicio</a>
-                </li>
-                <li>
-                    <a href="#contacto-1"> Contacto</a>
-                </li>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <!--div class="menu-icon" id="menu-icon">
+                <i class="fa fa-bars"></i>
+
+            </div--->
+            <button class="cerrar-menu"id="cerrar"><i class="bi bi-x"></i></button>
+            ul class="menu" id="menu"
+            <ul class="nav-list">
+                li class="menu-item"><a href="#Hablemos" class="active item"> Hablemos</a></li>
+                <li class="menu-item"><a href="#contacto" class="item"> Contacto</a></li-->
+                <li><a href="#Hablemos"> Hablemos</a></li>
+                <li><a href="#contacto"> Contacto</a></li>
+                li><a href="#"> Hablemos</a></li>
+                <li><a href="#"> Hablemos</a></li>
             </ul>
         </nav>
-        <a href="#inicio"></a>     
+    
+
     </header>
 
     <main>
@@ -34,8 +44,7 @@
             <p>
                 Actualmente me estoy certificando en Desarrollo Web (HTML, CSS y JavaScript), inicialmente me formé en Administración de Empresas, tengo experiencia en Marketing Digital, Creación de Contenido, Edición de Video e Imagen, conocimiento y aplicación de herramientas y planes en Gestión de Proyectos y Liderazgo.
              </p>
-
-             <input type="submit" value="Descargar mi CV">
+             <a class="btn" href="https://drive.google.com/file/d/1NRWig9qy23aRbM7O1-LcgN8u2uzn5JQ8/view?usp=drive_link"> Descargar mi CV</a>
            
         </section>
         <section>
@@ -65,14 +74,14 @@
                     </ul>
                 </nav>
             </article>
-            
-        </section>    
                
     </main>
 
     <footer>
         <p>Código Latam</p>
     </footer>
+
+    <script src="js/main.js"></script>
 
 </body>
 </html>
